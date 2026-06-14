@@ -2,6 +2,7 @@
 
 **English** · [中文](./README.zh.md)
 
+[![Typecheck](https://github.com/choukh/Bedrock/actions/workflows/typecheck.yml/badge.svg)](https://github.com/choukh/Bedrock/actions/workflows/typecheck.yml)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 *Laying the groundwork for the metaphysics of V.*
@@ -84,6 +85,18 @@ ordinary sense: the groundwork beneath an inquiry. Both meanings are intended.
 
 Everything in this project is produced with AI assistance, and every line of it,
 this document included, is reviewed word by word by the author.
+
+## Dependencies
+
+The development typechecks against the following pinned toolchain:
+
+| Component | Version |
+| --- | --- |
+| [Agda](https://github.com/agda/agda) | 2.8.0 |
+| [cubical](https://github.com/agda/cubical) | 0.9 |
+
+Every push is typechecked against these versions by
+[GitHub Actions](.github/workflows/typecheck.yml).
 
 ## License
 
