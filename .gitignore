@@ -1,0 +1,6 @@
+# Agda
+_build/
+*.agdai
+
+# macOS
+.DS_Store

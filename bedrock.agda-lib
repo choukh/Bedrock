@@ -1,0 +1,4 @@
+name: bedrock
+include: src
+depend: cubical standard-library
+flags: -WnoUnsupportedIndexedMatch
