@@ -29,9 +29,16 @@ Usage:
 Exit status is non-zero if any violation remains (in --fix, only the report-only ones).
 """
 
+import os
 import re
 import subprocess
 import sys
+
+# Verbatim third-party text (licenses, etc.) is never linted, whatever its extension.
+EXCLUDE_BASENAMES = {
+    "license", "license.md", "license.txt", "licence", "licence.md",
+    "copying", "copying.md", "unlicense", "notice", "notice.md",
+}
 
 # ---- character classes -------------------------------------------------------
 
@@ -410,7 +417,9 @@ def target_files(explicit, staged):
         files = git_lines(["diff", "--cached", "--name-only", "--diff-filter=ACM"])
     else:
         files = git_lines(["ls-files", "*.md", "*.lagda.md"])
-    return [f for f in files if (f.endswith(".md") or f.endswith(".lagda.md"))]
+    return [f for f in files
+            if (f.endswith(".md") or f.endswith(".lagda.md"))
+            and os.path.basename(f).lower() not in EXCLUDE_BASENAMES]
 
 
 def main(argv):
