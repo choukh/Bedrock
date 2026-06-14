@@ -2,6 +2,8 @@
 
 **English** · [中文](./README.zh.md)
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 *Laying the groundwork for the metaphysics of V.*
 
 A machine-checked development, in [Cubical Agda](https://github.com/agda/cubical),

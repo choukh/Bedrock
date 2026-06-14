@@ -13,6 +13,8 @@ Rules (apply to Markdown prose, `*.md` / `*.lagda.md`; the verbatim LICENSE is e
      (the wrapped lines are joined); breaks at Latin word boundaries are kept.        [auto-fix]
   4. No em dash — (U+2014), ― (U+2015), or 中文 破折号 ——                          [report only]
   5. No single quotes as quotation marks in Chinese context, no quote nesting       [report only]
+  6. Inside an ```agda code block: no Chinese or full-width symbols (the CJK prose
+     rules do not apply there); Agda's own Unicode (≡ ℕ λ …) is fine                 [report only]
 
 "Chinese context" = the punctuation is adjacent to (or, for quotes/parens, wraps) a
 CJK ideograph or CJK punctuation, looking past whitespace, markdown emphasis markers,
@@ -202,6 +204,38 @@ def line_to_index(text, lineno):
     return 0
 
 
+# ---- Agda code blocks must be English-only -----------------------------------
+
+_AGDA_FENCE = re.compile(r"^\s*(```+|~~~+)\s*([A-Za-z0-9_-]*)\s*$")
+_CLOSE_FENCE = re.compile(r"^\s*(```+|~~~+)\s*$")
+
+
+def agda_block_violations(text):
+    """Chinese / full-width characters inside an ```agda code block are banned.
+
+    Agda's own Unicode operators (≡ ℕ λ Δ₀ 𝒮 …) are not CJK and are allowed; only
+    CJK ideographs and full-width symbols are flagged, for manual translation."""
+    out = []
+    in_agda = False
+    off = 0
+    for line in text.split("\n"):
+        if not in_agda:
+            m = _AGDA_FENCE.match(line)
+            if m and m.group(2).lower() == "agda":
+                in_agda = True
+        elif _CLOSE_FENCE.match(line):
+            in_agda = False
+        else:
+            bad = [c for c in line if is_cjk(c)]
+            if bad:
+                col = next(i for i, c in enumerate(line) if is_cjk(c))
+                uniq = "".join(dict.fromkeys(bad))
+                out.append(Violation(off + col,
+                                     f"Agda code must be English-only; translate {uniq!r} to English", False))
+        off += len(line) + 1
+    return out
+
+
 # ---- analysis ----------------------------------------------------------------
 
 class Violation:
@@ -335,6 +369,9 @@ def analyze(text):
             depth += 1
         elif ch == "」" and depth > 0:
             depth -= 1
+
+    # Rule 6: Agda code blocks must be English-only (no Chinese / full-width)
+    manual.extend(agda_block_violations(text))
 
     char_fixed = "".join(edits.get(i, c) for i, c in enumerate(text)) if edits else text
 

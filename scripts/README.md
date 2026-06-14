@@ -15,6 +15,9 @@ Checks Markdown prose (`*.md`, `*.lagda.md`; the verbatim `LICENSE` is excluded)
   between two CJK characters (which would render as a space). All auto-fixable.
 - Em dash (`—`, `―`, `——`) is banned everywhere; en dash `–` and hyphen `-` are allowed.
 - Single quotes as Chinese quotation marks, and any quote nesting, are banned.
+- Inside an `agda` fenced code block, Chinese and full-width symbols are banned
+  (translate to English); the CJK prose rules above do not apply there. Agda's own
+  Unicode (`≡ ℕ λ`) is fine.
 
 English apostrophes (`V's`) and English quotes (`"formal purity"`) are not in Chinese
 context and are left untouched. Code spans, fenced blocks, links, and URLs are protected.

@@ -2,6 +2,8 @@
 
 [English](./README.md) · **中文**
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 *为 V 的形而上学奠基。*
 
 一项在 [Cubical Agda](https://github.com/agda/cubical) 中的机器验证工作，针对当代集合宇宙问题背后的那部分集合论：力迫、内模型，以及 V 的结构。
