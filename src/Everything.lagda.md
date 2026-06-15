@@ -15,7 +15,7 @@ sidebar, or in the import list below.
 <!--zh-->
 *为 V 的形而上学奠基。*
 
-一项在 Cubical Agda 中的机器验证开发，针对当代集合宇宙问题背后的那部分集合论：力迫、内模型，以及 V 的结构。当前目标是完整机械化 `L` ⊨ GCH，其中累积层级 `V` 以高阶归纳类型实现。完整论述见 [纲领](https://github.com/choukh/Bedrock/blob/main/docs/zh/CHARTER.md)。
+一项在 Cubical Agda 中的机器验证工作，针对当代集合宇宙问题背后的那部分集合论：力迫、内模型，以及 V 的结构。当前目标是完整机械化 `L` ⊨ GCH，其中累积层级 `V` 以高阶归纳类型实现。完整论述见 [纲领](https://github.com/choukh/Bedrock/blob/main/docs/zh/CHARTER.md)。
 
 本站点由文学化 Agda 生成。开发尚无实质内容，下列模块是演示渲染框架的示例。可从侧边栏或下方的导入列表中浏览它们。
 <!--/-->

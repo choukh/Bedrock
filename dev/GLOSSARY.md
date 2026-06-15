@@ -118,3 +118,4 @@ Renderings below are taken verbatim from the owner's tuned parallel docs (the en
 | charter | `纲领` | `綱領` | `zh:宪章; ja:憲章` | yes | the project's founding document; file slug stays `CHARTER.md` |
 | prose | `文稿` | `文章` | `散文` | | written body text, not the literary essay genre |
 | proof assistant | `证明助理` | `証明支援系` | | yes | zh 证明助理 vs ja 証明支援系 (deliberate) |
+| machine-checked development | `机器验证工作` | `機械検証の開発` | `zh:机器验证开发; zh:机械验证; ja:機械検査の開発` | yes | the README tagline; "machine-checked" is zh 机器 / ja 機械 and "development" is zh 工作 / ja 開発 (deliberate); the certificate/ground phrasings (机器可检的证书 / 经机器检验的地基 etc.) are separate and not covered here |
