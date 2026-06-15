@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bedrock">
-  <rect width="64" height="64" rx="12" fill="#0054F4"/>
-  <g fill="#fff" opacity="0.92">
-    <rect x="12" y="40" width="40" height="9" rx="2"/>
-    <rect x="16" y="28" width="32" height="9" rx="2" opacity="0.8"/>
-    <rect x="20" y="16" width="24" height="9" rx="2" opacity="0.6"/>
-  </g>
+<style>
+  .mark { stroke: #0054F4; }
+  @media (prefers-color-scheme: dark) { .mark { stroke: #119DDB; } }
+</style>
+<g class="mark" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M25.70,41.00 C29.35,53.00 34.65,53.00 38.30,41.00" stroke-width="4" opacity="1"></path><path d="M20.98,32.00 C27.37,44.00 36.63,44.00 43.02,32.00" stroke-width="4" opacity="0.8"></path><path d="M16.25,23.00 C25.39,35.00 38.62,35.00 47.75,23.00" stroke-width="4" opacity="0.62"></path><path d="M11.53,14.00 C23.40,26.00 40.60,26.00 52.47,14.00" stroke-width="4" opacity="0.46"></path></g>
+<circle cx="32" cy="51" r="2.5" fill="#F5DEB3"></circle>
 </svg>
