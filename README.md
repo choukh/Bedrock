@@ -3,6 +3,9 @@
 **English** · [中文](docs/zh/README.md) · [日本語](docs/ja/README.md)
 
 [![Typecheck](https://github.com/choukh/Bedrock/actions/workflows/typecheck.yml/badge.svg)](https://github.com/choukh/Bedrock/actions/workflows/typecheck.yml)
+![Status: early](https://img.shields.io/badge/status-early-orange)
+[![Agda](https://img.shields.io/badge/Agda-2.8.0-blue)](https://github.com/agda/agda)
+[![cubical](https://img.shields.io/badge/cubical-0.9-blue)](https://github.com/agda/cubical)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 *Laying the groundwork for the metaphysics of V.*
