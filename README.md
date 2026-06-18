@@ -98,16 +98,9 @@ AI agents work from [AGENTS.md](AGENTS.md); human contributors, start with
 Bedrock is multi-licensed; per-file terms are declared in [`REUSE.toml`](REUSE.toml) and
 verified by `reuse lint`. In short:
 
-- **The mathematics and prose** (`src/`, `docs/`, this `README`) and the brand marks
-  (`site/static/favicon.svg`, `site/static/brand.svg`) are licensed
-  [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); the Agda development
-  is treated as a piece of mathematical writing rather than conventional software.
-- **All first-party code and configuration** (the tooling, the site front-end, build and dev
-  files) is [AGPL-3.0-only](https://www.gnu.org/licenses/agpl-3.0.html). This includes the
-  front-end assets adapted from [the 1lab](https://1lab.dev) and the vendored 1lab tree under
-  `site/vendor/1lab/`, combined here by mere aggregation.
-- **The self-hosted web fonts** (`site/static/fonts/`) are third-party, under
-  [OFL-1.1](https://openfontlicense.org).
+- **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)**: the maths, prose, and brand marks (`src/`, `docs/`, `README`, the favicon/brand SVGs).
+- **[AGPL-3.0-only](https://www.gnu.org/licenses/agpl-3.0.html)**: all other first-party code and config, including the vendored [1lab](https://1lab.dev) front-end.
+- **[OFL-1.1](https://openfontlicense.org)**: the self-hosted web fonts (`site/static/fonts/`).
 
 Full texts are in [`LICENSES/`](LICENSES/); [NOTICE](NOTICE) has the third-party attributions
 and the AGPL section 13 corresponding-source statement.

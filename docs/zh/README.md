@@ -66,9 +66,9 @@ AI agent 以 [AGENTS.md](../../AGENTS.md) 为准，人类贡献者请从 [CONTRI
 
 Bedrock 采用多重许可；逐文件的条款在 [`REUSE.toml`](../../REUSE.toml) 中声明，并由 `reuse lint` 验证。简而言之：
 
-- **数学开发与文稿** (`src/`、`docs/`、本 `README`) 以及品牌标识 (`site/static/favicon.svg`、`site/static/brand.svg`) 以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可；其中的 Agda 开发被视作一份数学写作，而非传统软件。
-- **所有第一方代码与配置** (工具链、站点前端、构建与开发文件) 以 [AGPL-3.0-only](https://www.gnu.org/licenses/agpl-3.0.html) 许可。这包括改编自 [1lab](https://1lab.dev) 的前端资源，以及 `site/vendor/1lab/` 下内嵌的 1lab 副本，在此仅以聚合方式组合。
-- **自托管的网页字体** (`site/static/fonts/`) 为第三方资源，以 [OFL-1.1](https://openfontlicense.org) 许可。
+- **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)**：数学、文稿与品牌标识 (`src/`、`docs/`、`README`、favicon/brand SVG)。
+- **[AGPL-3.0-only](https://www.gnu.org/licenses/agpl-3.0.html)**：其余所有第一方代码与配置，含内嵌的 [1lab](https://1lab.dev) 前端。
+- **[OFL-1.1](https://openfontlicense.org)**：自托管网页字体 (`site/static/fonts/`)。
 
 完整许可文本见 [`LICENSES/`](../../LICENSES/)；第三方署名与 AGPL 第 13 条对应源代码声明见 [NOTICE](../../NOTICE)。
 
