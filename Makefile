@@ -71,7 +71,7 @@ site: html types
 
 serve:
 	@echo "Serving $(SITE_OUT) at http://localhost:$(PORT)/ (Ctrl-C to stop)"
-	cd $(SITE_OUT) && $(PY) -m http.server $(PORT)
+	$(PY) -m http.server $(PORT) --directory $(SITE_OUT)
 
 # Deploy the site (built at domain root) to Cloudflare Pages. Needs `wrangler login`
 # or CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID in the environment.
