@@ -35,6 +35,7 @@ LANG_LABELS = {"en": "English", "zh": "中文", "ja": "日本語"}
 
 UI = {
     "en": {"search": "Search…", "theme": "Toggle theme", "contents": "On this page",
+           "menu": "Menu", "close": "Close",
            "untranslated": "This page is not yet translated; showing English.",
            "modules": "Modules", "source": "Source", "overview": "Overview",
            "license": "content licensed CC BY-NC-SA 4.0",
@@ -43,6 +44,7 @@ UI = {
            "external": "You are viewing the Cubical library.",
            "back": "Back to Bedrock"},
     "zh": {"search": "搜索…", "theme": "切换主题", "contents": "本页内容",
+           "menu": "菜单", "close": "关闭",
            "untranslated": "本页尚未翻译，此处显示英文。",
            "modules": "模块", "source": "源码", "overview": "概览",
            "license": "内容以 CC BY-NC-SA 4.0 许可",
@@ -51,6 +53,7 @@ UI = {
            "external": "您正在浏览 Cubical 库。",
            "back": "返回 Bedrock"},
     "ja": {"search": "検索…", "theme": "テーマ切替", "contents": "このページの内容",
+           "menu": "メニュー", "close": "閉じる",
            "untranslated": "このページは未翻訳です。英語を表示しています。",
            "modules": "モジュール", "source": "ソース", "overview": "概要",
            "license": "コンテンツは CC BY-NC-SA 4.0 ライセンス",
@@ -365,7 +368,8 @@ def render_module(module, html_dir, langs, internal, rendered, modnav_list,
             LANGNAV=lang_nav(out_name, lang, langs),
             MODNAV=modules_nav(current, modnav_list, lang),
             TOC=toc_html(toc, lang), BANNER=banner, BODY=body, FOOTER=footer_html(lang),
-            S_SEARCH=UI[lang]["search"], S_THEME=UI[lang]["theme"])
+            S_SEARCH=UI[lang]["search"], S_THEME=UI[lang]["theme"],
+            S_MENU=UI[lang]["menu"], S_CLOSE=UI[lang]["close"])
         dest = os.path.join(out_dir, lang, out_name)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         open(dest, "w", encoding="utf-8").write(page)

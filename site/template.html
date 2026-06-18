@@ -20,7 +20,10 @@
   <div id="site-header">
 %%EXTBANNER%%
   <header id="topbar">
-    <a id="brand" href="%%BASEURL%%/%%LANG%%/index.html">%%SITE%%</a>
+    <button id="nav-toggle" type="button" title="%%S_MENU%%" aria-label="%%S_MENU%%"
+            aria-controls="toc" aria-expanded="false">☰</button>
+    <a id="brand" href="%%BASEURL%%/%%LANG%%/index.html"><img class="brand-logo"
+       src="%%BASEURL%%/static/favicon.svg" alt="" />%%SITE%%</a>
     <div class="topbar-spacer"></div>
     <div class="search-form" role="search">
       <input id="search-box" type="text" placeholder="%%S_SEARCH%%" autocomplete="off" aria-label="%%S_SEARCH%%" />
@@ -31,9 +34,15 @@
   </header>
   </div>
 
+  <div id="nav-backdrop" hidden></div>
+
   <main>
     <div id="post-toc-container">
       <aside id="toc">
+        <div id="toc-drawer-head">
+          <span class="drawer-title">%%S_MENU%%</span>
+          <button id="nav-close" type="button" title="%%S_CLOSE%%" aria-label="%%S_CLOSE%%">✕</button>
+        </div>
         <div id="toc-container">
           %%MODNAV%%
           %%TOC%%

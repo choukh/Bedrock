@@ -1,4 +1,4 @@
-# Bedrock
+<h1 style="display: flex; align-items: center; gap: 0.35rem"><img src="site/static/favicon.svg" alt="" height="32" align="middle"> Bedrock</h1>
 
 **English** · [中文](docs/zh/README.md) · [日本語](docs/ja/README.md)
 

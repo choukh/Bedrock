@@ -94,8 +94,11 @@ body {
   display: flex; align-items: center; gap: 0.75rem;
   padding: 0.5rem 1rem; background: var(--text-bg);
 }
-#brand { font-family: var(--sans); font-weight: 700; font-size: 1.2rem;
+#brand { display: inline-flex; align-items: center; gap: 0.45rem;
+         font-family: var(--sans); font-weight: 700; font-size: 1.2rem;
          color: var(--primary); text-decoration: none; }
+/* The favicon SVG has only a viewBox (no intrinsic size), so size it explicitly. */
+.brand-logo { height: 1.5rem; width: 1.5rem; display: block; flex: none; }
 .topbar-spacer { flex: 1; }
 .search-form { position: relative; }
 #search-box {
@@ -122,6 +125,20 @@ body {
 #theme-toggle { font-size: 1.1rem; background: none; border: none; cursor: pointer;
   color: var(--text-fg); padding: 0.2rem 0.4rem; border-radius: 6px; }
 #theme-toggle:hover { background: var(--button-hover); }
+/* Hamburger + drawer close + backdrop: inert on wide screens (the sidebar is always shown);
+   the narrow-screen block below turns them on and makes #toc an off-canvas drawer. */
+#nav-toggle { display: none; font-size: 1.3rem; line-height: 1; background: none; border: none;
+  cursor: pointer; color: var(--text-fg); padding: 0.2rem 0.45rem; border-radius: 6px;
+  margin-left: -0.25rem; }
+#nav-toggle:hover { background: var(--button-hover); }
+#toc-drawer-head { display: none; align-items: center; justify-content: space-between;
+  margin-bottom: 0.5rem; }
+#toc-drawer-head .drawer-title { font-family: var(--sans); font-weight: 700; font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--fg-alt); }
+#nav-close { font-size: 1.1rem; line-height: 1; background: none; border: none; cursor: pointer;
+  color: var(--text-fg); padding: 0.2rem 0.45rem; border-radius: 6px; }
+#nav-close:hover { background: var(--button-hover); }
+#nav-backdrop { display: none; }
 
 /* ---- layout (matches 1lab: centered up to 80rem; a full-width sidebar | content | gutter
    grid that uses ultra-wide screens at >=95rem) ---- */
@@ -229,8 +246,38 @@ a.inline-ref { color: var(--code-identifier); }
 #site-footer .footer-copyright { margin-top: 0.35rem; font-size: 0.8rem; opacity: 0.9; }
 
 /* ---- narrow screens ---- */
+/* The sidebar can no longer sit beside the content, so it becomes an off-canvas drawer that
+   slides in from the left over a dimmed backdrop, opened by the topbar hamburger. */
 @media (max-width: 60rem) {
   #post-toc-container { grid-template-columns: minmax(0, 1fr); grid-template-areas: "content"; }
-  #toc { display: none; }                    /* narrow screens: content only (topbar search remains) */
   #search-box { width: 8rem; }
+
+  #nav-toggle { display: inline-flex; align-items: center; }
+  #toc-drawer-head { display: flex; }
+
+  #toc {
+    display: block; position: fixed; top: 0; left: 0; bottom: 0;
+    width: min(20rem, 82vw); max-height: none;
+    padding: 0.85rem 1.1rem 1.5rem; background: var(--text-bg);
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.22);
+    overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 40;
+    transform: translateX(-100%); visibility: hidden;
+    transition: transform 0.22s ease, visibility 0s linear 0.22s;
+  }
+  body.nav-open #toc {
+    transform: translateX(0); visibility: visible;
+    transition: transform 0.22s ease, visibility 0s;
+  }
+
+  #nav-backdrop {
+    display: block; position: fixed; inset: 0; z-index: 30;
+    background: rgba(0, 0, 0, 0.4); opacity: 0; pointer-events: none;
+    transition: opacity 0.22s ease;
+  }
+  body.nav-open #nav-backdrop { opacity: 1; pointer-events: auto; }
+  body.nav-open { overflow: hidden; }        /* freeze page scroll while the drawer is open */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #toc, #nav-backdrop { transition: none; }
 }

@@ -29,7 +29,40 @@
     renderMath();
     initSearch();
     initHover();
+    initNav();
   });
+
+  /* ---- mobile navigation drawer ------------------------------------------- */
+  function initNav() {
+    var body = document.body;
+    var toggle = document.getElementById("nav-toggle");
+    var toc = document.getElementById("toc");
+    if (!toggle || !toc) return;
+    var backdrop = document.getElementById("nav-backdrop");
+    var close = document.getElementById("nav-close");
+    function setOpen(open) {
+      body.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    toggle.addEventListener("click", function () {
+      setOpen(!body.classList.contains("nav-open"));
+    });
+    if (backdrop) backdrop.addEventListener("click", function () { setOpen(false); });
+    if (close) close.addEventListener("click", function () { setOpen(false); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+    /* Tapping any link in the drawer navigates, so dismiss the drawer with it. */
+    toc.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setOpen(false);
+    });
+    /* Leaving narrow layout (e.g. rotate to landscape) must not strand an open drawer. */
+    var wide = window.matchMedia("(min-width: 60rem)");
+    (wide.addEventListener ? wide.addEventListener.bind(wide, "change")
+                           : wide.addListener.bind(wide))(function (e) {
+      if (e.matches) setOpen(false);
+    });
+  }
 
   /* ---- math (client-side KaTeX over pre-wrapped spans) -------------------- */
   function renderMath() {
