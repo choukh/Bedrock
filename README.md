@@ -1,4 +1,4 @@
-<h1><img src="site/static/brand.svg" alt="" height="44" align="middle"> Bedrock</h1>
+<h1><img src="site/static/brand.svg" alt="" height="56" align="middle"> Bedrock</h1>
 
 **English** · [中文](docs/zh/README.md) · [日本語](docs/ja/README.md)
 

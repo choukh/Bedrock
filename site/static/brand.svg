@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 88" role="img" aria-label="Bedrock">
-<!-- Same mark as favicon.svg, but with bottom padding (taller viewBox, 64x88 vs 64x64) so that
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 112" role="img" aria-label="Bedrock">
+<!-- Same mark as favicon.svg, but with bottom padding (taller viewBox, 64x112 vs 64x64) so that
      an inline <img align="middle"> sits optically centered against heading text on renderers
      that strip CSS (e.g. GitHub READMEs), where vertical-align cannot be tuned. The mark's
      visual weight is low (bright cup + dot near the bottom), so the padding lifts it to match.
-     Tune the viewBox height to nudge: taller -> the mark rides higher. -->
+     Tune the viewBox height to nudge: taller -> the mark rides higher (keep the README <img>
+     height = viewBox/2 so the visible mark stays the same on-screen size). -->
 <g fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M24.69,42.44 C28.93,56.36 35.07,56.36 39.31,42.44" opacity="1"></path><path d="M19.22,32.00 C26.63,45.92 37.37,45.92 44.78,32.00" opacity="0.88"></path><path d="M13.73,21.56 C24.33,35.48 39.68,35.48 50.27,21.56" opacity="0.76"></path><path d="M8.25,11.12 C22.02,25.04 41.98,25.04 55.75,11.12" opacity="0.64"></path></g>
 <circle cx="32" cy="54" r="2.8" fill="#F5DEB3"></circle>
 </svg>
