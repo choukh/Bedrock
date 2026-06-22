@@ -11,7 +11,7 @@ version = 1
 [[annotations]]
 path = "**"
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2026 choukh <choukyuhei@gmail.com>"
+SPDX-FileCopyrightText = "2026 Bedrock Institute"
 SPDX-License-Identifier = "AGPL-3.0-only"
 
 # ---- Vendored 1lab front-end: AGPL-3.0 (= default) with upstream copyright ---------
@@ -25,7 +25,7 @@ SPDX-License-Identifier = "AGPL-3.0-only"
 [[annotations]]
 path = ["src/**", "docs/**", "README.md", "site/static/assets/**"]
 precedence = "override"
-SPDX-FileCopyrightText = "2026 choukh <choukyuhei@gmail.com>"
+SPDX-FileCopyrightText = "2026 Bedrock Institute"
 SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
 
 # ---- Carve-out: self-hosted third-party web fonts -> OFL-1.1 (per-font copyright) --

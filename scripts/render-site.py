@@ -62,7 +62,7 @@ UI = {
            "external": "Cubical ライブラリを閲覧しています。",
            "back": "Bedrock に戻る"},
 }
-SOURCE_URL = "https://github.com/choukh/Bedrock"
+SOURCE_URL = "https://github.com/BedrockInstitute/Bedrock"
 LANDING = "Everything"  # the aggregator master; rendered as the site landing index.html
 
 PRE_RE = re.compile(r'<pre class="Agda">.*?</pre>', re.DOTALL)
@@ -261,7 +261,7 @@ def ext_banner(lang):
 def footer_html(lang):
     s = UI[lang]
     source = f'<a href="{SOURCE_URL}">{s["source"]}</a>'
-    copyright_ = f'© 2026 choukh (choukyuhei@gmail.com) · {s["license"]} · {source}'
+    copyright_ = f'© 2026 Bedrock Institute · {s["license"]} · {source}'
     return (f'<div class="footer-credit">{s["credit"]}</div>'
             f'<div class="footer-copyright">{copyright_}</div>')
 

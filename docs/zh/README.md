@@ -4,13 +4,13 @@
 
 [English](../../README.md) · **中文** · [日本語](../ja/README.md)
 
-[![Typecheck](https://github.com/choukh/Bedrock/actions/workflows/typecheck.yml/badge.svg)](https://github.com/choukh/Bedrock/actions/workflows/typecheck.yml)
+[![Typecheck](https://github.com/BedrockInstitute/Bedrock/actions/workflows/typecheck.yml/badge.svg)](https://github.com/BedrockInstitute/Bedrock/actions/workflows/typecheck.yml)
 ![Status: early](https://img.shields.io/badge/status-early-orange)
 [![Agda](https://img.shields.io/badge/Agda-2.8.0-blue)](https://github.com/agda/agda)
 [![cubical](https://img.shields.io/badge/cubical-0.9-blue)](https://github.com/agda/cubical)
 [![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/content-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Code: AGPL-3.0-only](https://img.shields.io/badge/code-AGPL--3.0--only-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
-[![REUSE status](https://api.reuse.software/badge/github.com/choukh/Bedrock)](https://api.reuse.software/info/github.com/choukh/Bedrock)
+[![REUSE status](https://api.reuse.software/badge/github.com/BedrockInstitute/Bedrock)](https://api.reuse.software/info/github.com/BedrockInstitute/Bedrock)
 
 *为 V 的形而上学奠基。*
 
@@ -80,4 +80,4 @@ Bedrock 采用多重许可；逐文件的条款在 [`REUSE.toml`](../../REUSE.to
 
 完整许可文本见 [`LICENSES/`](../../LICENSES/)；第三方署名与 AGPL 第 13 条对应源代码声明见 [NOTICE](../../NOTICE)。
 
-© 2026 choukh (choukyuhei@gmail.com)。
+© 2026 Bedrock Institute。

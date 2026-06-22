@@ -3,7 +3,7 @@ and fonts the project bundles or adapts, with their licenses and required notice
 note on Bedrock's own license. The filename NOTICE follows common (Apache-style) convention.
 
 Bedrock
-Copyright (C) 2026 choukh (choukyuhei@gmail.com)
+Copyright (C) 2026 Bedrock Institute
 
 Bedrock is multi-licensed; per-file terms are declared in REUSE.toml (verified by `reuse lint`),
 with the full texts in LICENSES/ and a human summary in COPYRIGHT:
@@ -26,7 +26,7 @@ Licensed under the GNU Affero General Public License v3.0 (AGPL-3.0-only).
   site/vendor/1lab/ with the upstream LICENSE; derived files (site/static/bedrock.css,
   and the hover mechanism in site/static/bedrock.js) are likewise AGPL-3.0 and are
   marked as such. Per AGPL-3.0 section 13, the corresponding source of the deployed site
-  is this public repository: https://github.com/choukh/Bedrock
+  is this public repository: https://github.com/BedrockInstitute/Bedrock
 
   The 1lab itself bundles, in turn, the following (their licenses apply to those parts):
     - KaTeX                            MIT

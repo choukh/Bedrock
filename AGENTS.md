@@ -164,6 +164,7 @@ Deployment is automatic: on every merge to `main`, GitHub Actions builds the sit
 it to Cloudflare Pages (bedrock.institute) and GitHub Pages. Contributors need do nothing and
 never handle deployment credentials.
 
-The Cloudflare credentials live only as GitHub Actions encrypted repository secrets; they are
-never committed, never printed in logs, and not visible to contributors. The one-time owner
+The Cloudflare credentials live only as GitHub Actions encrypted organization secrets (on the
+BedrockInstitute org, inherited by this repo); they are never committed, never printed in logs,
+and not visible to contributors. The one-time owner
 setup is documented in `.github/workflows/cloudflare.yml`.

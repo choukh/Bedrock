@@ -18,7 +18,7 @@ Triggered on push to `main` (typecheck also runs on pull requests):
 
 ## Secrets
 
-The Cloudflare deploy uses repository secrets `CLOUDFLARE_API_TOKEN` and
-`CLOUDFLARE_ACCOUNT_ID` (owner-configured GitHub Actions encrypted secrets, never committed or
-printed). Deployment is automatic and contributors handle no credentials. The one-time owner
+The Cloudflare deploy uses organization secrets `CLOUDFLARE_API_TOKEN` and
+`CLOUDFLARE_ACCOUNT_ID` (owner-configured GitHub Actions encrypted secrets on the BedrockInstitute
+org, inherited by this repo, never committed or printed). Deployment is automatic and contributors handle no credentials. The one-time owner
 setup is documented at the top of `cloudflare.yml`.

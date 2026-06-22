@@ -3,8 +3,8 @@ name: cloudflare
 # Build the site (at domain root) and deploy it to Cloudflare Pages -> bedrock.institute.
 # This is the canonical deployment; .github/workflows/pages.yml keeps a GitHub Pages mirror.
 # Owner setup (once): create a Cloudflare Pages project named "bedrock", point
-# bedrock.institute at it, and add the repository secrets CLOUDFLARE_API_TOKEN and
-# CLOUDFLARE_ACCOUNT_ID.
+# bedrock.institute at it, and add the organization secrets CLOUDFLARE_API_TOKEN and
+# CLOUDFLARE_ACCOUNT_ID to the BedrockInstitute org (inherited by this repo).
 
 on:
   push:
